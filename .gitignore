@@ -7,3 +7,4 @@
 out
 gen
 .idea/dataSources.xml
+db.sqlite3
