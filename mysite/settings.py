@@ -32,7 +32,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'akula993@gmail.com'
 EMAIL_HOST_PASSWORD = 'postojrkzxzihejp'
 EMAIL_PORT = 587
-
+# SITE_ID = 2
 
 # Application definition
 
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'django.contrib.postgres',
     'blog.apps.BlogConfig',
     'taggit',
 ]
@@ -84,10 +87,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blog',
+        'USER': 'blog',
+        'PASSWORD': '0706',
+        # 'HOST': '',
+        # 'PORT': 'db_port_number',
     }
 }
+
 
 
 # Password validation
